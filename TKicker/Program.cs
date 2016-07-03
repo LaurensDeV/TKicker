@@ -12,7 +12,7 @@ namespace ServerHasMoved
 		{
 			Console.Title = "TKicker";
 			int Port = args.GetParam<int>(new string[] { "-p", "-port" }, 7777);
-			string KickMsg = args.GetParam<string>(new string[] { "-m", "-message" }, "Server moved.");
+			string KickMsg = args.GetParam<string>(new string[] { "-m", "-message" }, "Server is down (reason unknown).");
 			string address = args.GetParam<string>("-ip", "0.0.0.0");
 
 			TcpListener listener = new TcpListener(IPAddress.Parse(address), Port);
